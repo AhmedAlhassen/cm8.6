@@ -1,0 +1,20 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.6'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation "io.camunda:spring-boot-starter-camunda-sdk:8.6.16"
+	implementation "io.camunda.spring:spring-boot-starter-camunda-operate:8.6.5"
+	 implementation "io.camunda:spring-boot-starter-camunda-tasklist:8.6.10"
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
