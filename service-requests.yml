@@ -1,0 +1,76 @@
+service-request:
+  # Housing Loans
+  - id: 250000
+    code: houseConstructionLoan
+    name: HouseConstructionLoan
+    bpmnProcessId: Process_HouseConstructionService
+
+  - id: 250001
+    code: houseMaintenanceLoan
+    name: HouseMaintenanceLoan
+    bpmnProcessId: Process_HouseMaintenanceLoan
+
+  - id: 250002
+    code: houseExpansionLoan
+    name: HouseExpansionLoan
+    bpmnProcessId: Process_HouseMaintenanceLoan  # Same process as maintenance
+
+  # Housing Grants
+  - id: 250009
+    code: houseGrant
+    name: HouseGrant
+    bpmnProcessId: Process_HouseGrantService
+
+  - id: 250010
+    code: landGrant
+    name: LandGrant
+    bpmnProcessId: Process_LandGrantService
+
+  # Land Services
+  - id: 1650065
+    code: residentialLandPurchase
+    name: ResidentialLandPurchase
+    bpmnProcessId: Process_ResidentialLandPurchaseService
+
+  # Exchange Services
+  - id: 710725
+    code: exchangeLandForLand
+    name: ExchangeLandForLand
+    bpmnProcessId: Process_LandExchangeService
+
+  - id: 710726
+    code: exchangeHouseForHouse
+    name: ExchangeHouseForHouse
+    bpmnProcessId: Process_LandExchangeService  # Same process for all exchanges
+
+  # Exemption Services
+  - id: 710805
+    code: generalExemption
+    name: generalExemption
+    bpmnProcessId: Process_Exemptions
+
+  - id: 710887
+    code: repaymentExemption
+    name: repaymentExemption
+    bpmnProcessId: Process_Exemptions  # Same process for exemptions
+
+  # Post-Loan Services
+  - id: 70012
+    code: deferredToNonDeferred
+    name: DeferredToNonDeferred
+    bpmnProcessId: Process_DeferredToNonDeferred
+
+  - id: 70013
+    code: cancelApprovedLoan
+    name: CancelApprovedLoan
+    bpmnProcessId: Process_CancelApprovedLoanSRProcessing
+
+  - id: 70014
+    code: addApplicants
+    name: AddApplicants
+    bpmnProcessId: Process_addRemoveApplicants
+
+  - id: 70015
+    code: removeApplicants
+    name: RemoveApplicants
+    bpmnProcessId: Process_addRemoveApplicants  # Same process for add/remove

@@ -17,4 +17,12 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// https://mvnrepository.com/artifact/io.camunda.spring/spring-boot-starter-camunda-test
+	testImplementation("io.camunda.spring:spring-boot-starter-camunda-test:8.5.18")
+}
+
+test {
+	useJUnitPlatform()
 }

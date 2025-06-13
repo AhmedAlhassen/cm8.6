@@ -1,0 +1,70 @@
+#camunda:
+#  client:
+#    mode: self-managed
+#    auth:
+#      client-id: "camunda"
+#      client-secret: "5T7DMcqRuGd7AGj5Gzvg7BU180oMoEBB"
+#      issuer: "http://localhost:18080/auth/realms/camunda-platform"
+#    zeebe:
+#      enabled: true
+#      grpc-address: "http://localhost:26500"
+#      rest-address: "http://localhost:8080"
+#      prefer-rest-over-grpc: false
+#      audience: "zeebe-api"
+
+#operate:
+##  client:
+##    enabled: true
+##    profile: oidc
+##    base-url: "http://localhost:8081"
+##    auth-url: "http://localhost:18080/auth/realms/camunda-platform/protocol/openid-connect/token"
+##    audience: "operate-api"
+##    client-id: "camunda"
+##    client-secret: "5T7DMcqRuGd7AGj5Gzvg7BU180oMoEBB"
+
+#tasklist:
+#  client:
+#    profile: oidc
+#    enabled: true
+#    base-url: http://localhost:8082
+#    auth-url: http://localhost:18080/auth/realms/camunda-platform/protocol/openid-connect/token
+#    audience: tasklist-api
+#    client-id:
+#    client-secret:
+#    scope: # optional
+
+server:
+  port: 9099
+
+camunda:
+  client:
+    mode: self-managed
+    tenant-id: <default>
+    auth:
+      client-id: "camunda"
+      client-secret: "5T7DMcqRuGd7AGj5Gzvg7BU180oMoEBB"
+      token-url: http://localhost:18080/auth/realms/camunda-platform/protocol/openid-connect/token
+    zeebe:
+      enabled: true
+      grpc-address: http://localhost:26500
+      rest-address: http://localhost:8080
+      prefer-rest-over-grpc: false
+      audience: zeebe-api
+
+operate:
+  client:
+    profile: simple
+    enabled: true
+    base-url: http://localhost:8081
+    session-timeout: PT10M
+    username: demo
+    password: demo
+
+tasklist:
+  client:
+    profile: simple
+    enabled: true
+    base-url: http://localhost:8082
+    session-timeout: PT10M
+    username: demo
+    password: demo
